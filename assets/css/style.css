@@ -1,0 +1,29 @@
+main{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 20px auto;
+}
+
+.header > i{
+    color: rgba(29,161,242,1.00);
+    font-size: 38px;
+    margin-bottom: 22px;
+}
+
+.header > h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin-bottom: 28px;
+    font-size: 34px;
+}
+
+input{
+    padding: 18px 8px !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input::placeholder{
+    font-size: 18px;
+    font-family: inherit;
+}
