@@ -2,10 +2,9 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-    width: 26%;
+    max-width: 380px;
     margin: 20px auto;
-   
+    padding: 20px;
 }
 
 .header > i{
