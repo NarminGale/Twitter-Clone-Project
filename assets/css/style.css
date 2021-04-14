@@ -25,7 +25,10 @@ input{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      border-radius: 5px !important;  */
     border: none !important;
-    display: none !important;
+    visibility: hidden !important;
+    position: absolute;
+    bottom: 0;
+    padding: 5px 0 !important;
    
 }
 
@@ -34,6 +37,8 @@ input:focus {
     box-shadow: none !important;
     
   }
+
+ 
   
 /*  
  input::placeholder{ 
@@ -74,19 +79,30 @@ button[disabled],button:disabled{
 }
 
 .show{
-    display: block !important;
+    visibility: visible !important;
 }
 
 
 .mb-4{
     border: 1px solid lightgray;
-    padding: 20px 10px;
+    padding-left: 8px;
+    padding-right: 8px;
     border-radius: 5px;
+    height: 60px;
+    position: relative !important;
+    overflow: hidden;
+}
 
+.clicked-span {
+    position: absolute !important;
+    color: #1DA1F2 !important;
+    font-size: 13px !important;
+    top: 5px !important;
 }
 
 .form-group .mb-4 span{
+    font-size: 18px;
     color: #666;
-  
+    position: absolute !important;
+    top: 16px;
 }
-
