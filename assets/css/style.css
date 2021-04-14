@@ -21,16 +21,26 @@ main{
 }
 
 input{
-    padding: 18px 8px !important;
+  /*  padding: 18px 8px !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 5px !important;
+     border-radius: 5px !important;  */
+    border: none !important;
+    display: none !important;
+   
 }
 
-input::placeholder{
+input:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    
+  }
+  
+/*  
+ input::placeholder{ 
     font-size: 18px;
     font-family: inherit;
-}
-
+ } 
+*/
 
 button{
     width: 100% !important;
@@ -62,3 +72,21 @@ button[disabled],button:disabled{
 
 
 }
+
+.show{
+    display: block !important;
+}
+
+
+.mb-4{
+    border: 1px solid lightgray;
+    padding: 20px 10px;
+    border-radius: 5px;
+
+}
+
+.form-group .mb-4 span{
+    color: #666;
+  
+}
+
