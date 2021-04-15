@@ -6,40 +6,56 @@ var clickedSpanMail = document.querySelector("#input-email span");
 var clickedSpanPassword = document.querySelector("#input-password span");
 
 
-inputMail.addEventListener("click", function () {
+var email = document.querySelector("#exampleInputEmail1")
+var password = document.querySelector("#exampleInputPassword1")
+var btn = document.querySelector("#btn")
 
-    if (!formControlMail.classList.contains("show")) {
-        formControlMail.classList.add("show");
-        clickedSpanMail.classList.add("clicked-span");
-    }
 
-    inputMail.style.border = '2px solid #1DA1F2'; 
+inputMail.addEventListener("click", function (e) {
+    if (e.currentTarget.classList.contains("mb-4")){
+        console.log (e.currentTarget.classList)
 
+        if (!formControlMail.classList.contains("show")) {
+            formControlMail.classList.add("show");
+            clickedSpanMail.classList.add("clicked-span");
+        }
+
+        inputMail.style.border = '2px solid #1DA1F2'; 
+        email.focus()
+    }  
 })
-      
+
+
+ 
 
 inputPassword.addEventListener("click", function () {
 
     if (!formControlPas.classList.contains("show")) {
         formControlPas.classList.add("show");
         clickedSpanPassword.classList.add("clicked-span");
-    }
+       
     
+        
+    }
     inputPassword.style.border = '2px solid #1DA1F2'; 
-
+  
+password.focus()
 })
 
 
 
-/* input.addEventListener("click",function(){
-    if (formControl.style.display === 'none') {
-        formControl.style.display = 'block';
-      } else {
-        formControl.style.display = 'none';
-      }
+
+email.addEventListener('input',buttonCheck); 
+password.addEventListener('input',buttonCheck)
+btn.disabled = true
+function buttonCheck (){
+
+if((email.value === "") || (password.value === "" ) ){
+    btn.disabled = true
     
-    */
+}else {
+  btn.disabled = false;
+}
+}
 
 
-
-   
