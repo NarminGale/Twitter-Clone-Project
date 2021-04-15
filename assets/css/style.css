@@ -3,7 +3,9 @@ main {
   flex-direction: column;
   font-family: Verdana, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
-
+.main {
+  height: 100vh;
+}
 /* Section 1 css */
 .section-1 {
   display: flex;
@@ -24,6 +26,10 @@ main {
 .section-1 h4 {
   font-family: inherit;
   font-weight: bold;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 .sign-up,
@@ -82,8 +88,73 @@ footer p {
 }
 .footer-links a,
 footer p {
+  display: inline-block;
   font-size: 0.85rem;
   margin-right: 0.5rem;
+  margin-bottom: 0;
   color: rgb(91, 112, 131);
 }
 /* end of footer */
+
+@media screen and (min-width: 500px) {
+  .section-1 {
+    min-width: 480px;
+    margin: 0 auto;
+  }
+  .sign-up {
+    margin-right: 1.2rem;
+  }
+  .sign-up,
+  .log-in {
+    max-width: 260px;
+  }
+  .buttons {
+    flex-direction: row;
+  }
+  .section-1 h1 {
+    width: 430px;
+    font-size: 4.5rem;
+  }
+  .section-1 h4 {
+    font-weight: bolder;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  main {
+    flex-direction: row-reverse;
+    height: calc(100vh - 70px);
+  }
+  .main {
+    position: relative;
+  }
+  .section-2 {
+    flex-basis: 52%;
+  }
+  .section-1 h1 {
+    width: 100%;
+  }
+  .section-1 {
+    padding-top: 4rem;
+    flex-basis: 48%;
+    min-width: 630px;
+  }
+  .section-2 {
+    height: auto;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .sign-up,
+  .log-in {
+    max-width: 400px;
+  }
+  .section-2 .icon-white {
+    font-size: 17rem;
+  }
+}
