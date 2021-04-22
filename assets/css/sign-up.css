@@ -8,6 +8,7 @@
 .modal-body {
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-bottom: 4.5rem;
 }
 .modal-header {
   padding-top: 10px;
@@ -33,7 +34,7 @@
   color: #1da1f2;
 }
 
-.modal-title{
+.modal-title {
   font-weight: bold;
   margin-bottom: 1.5rem;
   font-size: 1.4rem !important;
@@ -74,7 +75,7 @@ input:focus ~ .floating-label {
   pointer-events: none;
   left: 10px;
   top: 16px;
- 
+
   color: rgb(91, 112, 131);
   transition: 0.2s ease all;
 }
@@ -82,18 +83,38 @@ input:focus ~ .floating-label {
   position: relative;
 }
 
-.date{
-margin-top: 2rem;
-margin-bottom: 0;
-font-weight: bold;
+.date {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-weight: bold;
 }
 
-.phone-input{
+.phone-input {
   margin-bottom: 1.8rem !important;
 }
-
-.text{
-  color: rgb(91, 112, 131);
+.use-Email a {
+  color: rgb(27, 149, 224) !important;
 }
 
-
+.text {
+  color: rgb(91, 112, 131);
+}
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+.mid-6 {
+  width: 48.5%;
+}
+.mid-4 {
+  width: 22.5%;
+}
+.mid-5 {
+  width: 24.5%;
+}
+.form-control-lg.small {
+  height: 3.6rem;
+  padding-right: 1rem;
+  font-size: 1.05rem;
+  color: black;
+}
