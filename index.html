@@ -19,6 +19,7 @@
     />
     <!-- Main css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign-up.css" />
     <!-- Font awesome -->
     <link
       rel="stylesheet"
@@ -28,6 +29,77 @@
     />
   </head>
   <body>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div></div>
+            <span><i class="fab fa-twitter"></i></span>
+            <div class="next-btn">
+              <button type="button" class="btn btn-primary right-btn" disabled>
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Create your account
+            </h5>
+            <div class="form-group">
+              <form>
+                <div class="mb-4">
+                  <input
+                    type="text"
+                    id="exampleInputEmail1"
+                    class="inputText"
+                    required
+                  />
+                  <span class="floating-label">Phone, email, or username </span>
+                </div>
+
+                <div class="mb-4">
+                  <input
+                    type="password"
+                    id="exampleInputPassword1"
+                    class="inputText"
+                    required
+                  />
+                  <span class="floating-label">Password </span>
+                </div>
+                <span><a href="#">Use email instead</a></span>
+                <h6>Date of birth</h6>
+                <p>
+                  This will not be shown publicly. Confirm your own age, even if
+                  this account is for a business, a pet, or something else.
+                </p>
+
+                <div class="form-row">
+                  <select class="form-control form-control-lg small">
+                    <option>Large select</option>
+                  </select>
+                  <select class="form-control form-control-lg small">
+                    <option>Large select</option>
+                  </select>
+                  <select class="form-control form-control-lg small">
+                    <option>Large select</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main starts here -->
     <div class="main">
       <main>
         <section class="section-1">
@@ -35,7 +107,13 @@
           <h1>Happening now</h1>
           <h4>Join Twitter today.</h4>
           <div class="buttons">
-            <a href="#" class="sign-up">Sign up</a>
+            <a
+              href="#"
+              class="sign-up"
+              data-toggle="modal"
+              data-target="#staticBackdrop"
+              >Sign up</a
+            >
             <a href="#" class="log-in">Log in</a>
           </div>
         </section>
@@ -65,19 +143,22 @@
         </div>
       </footer>
     </div>
-
-    <!-- Bootstrap -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
       crossorigin="anonymous"
     ></script>
     <!-- Main js -->
-    <script src="./assets/js/app.js"></script>
+    <!-- <script src="./assets/js/app.js"></script> -->
   </body>
 </html>
