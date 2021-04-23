@@ -118,3 +118,36 @@ input:focus ~ .floating-label {
   font-size: 1.05rem;
   color: black;
 }
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Safari, Chrome, Opera */
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+select:focus {
+  box-shadow: rgb(29 161 242) 0px 0px 0px 1px !important;
+}
+.mid-4,
+.mid-5,
+.mid-6 {
+  position: relative;
+}
+
+svg {
+  position: absolute;
+  top: 55%;
+  right: 15px;
+  fill: gray;
+}
+.upper-label {
+  position: absolute;
+  font-size: 13px;
+  color: rgb(91, 112, 131);
+  top: 24px;
+  left: 8px;
+  display: inline-block;
+}
+.upper-label-color {
+  color: #1da1f2;
+}
