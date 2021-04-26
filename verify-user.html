@@ -12,6 +12,7 @@
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
   <!-- Main css -->
   <link rel="stylesheet" href="./assets/css/forgotpassword.css" />
+  <link rel="stylesheet" href="./assets/css/verifyuser.css">
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -41,7 +42,15 @@
   <!-- Əsas Bölmə -->
   <div class="main-div">
     <h1>Verify your personal information</h1>
-    <p>Enter your email address to continue</p>
+    <!-- Profil və Ad -->
+    <div id="profile-part">
+      <img src="./assets/images/profileicon.jpg" style="width: 48px; height: 48px;">
+      <div id="user-details-part">
+        <div id="fullname-part">Name Surname</div>
+        <div id="username-part">@username</div>
+      </div>
+    </div>
+    <p>Enter your email address to continue</p> 
     <!-- İnput -->
     <input id="email-input" type="email" placeholder="Email adress">
     <!-- Button -->
