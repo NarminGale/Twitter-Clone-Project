@@ -59,21 +59,35 @@
                 <div class="mb-4">
                   <input
                     type="text"
-                    id="exampleInputEmail1"
-                    class="inputText"
+                    class="inputText name-input"
                     required
+                    maxlength="50"
                   />
                   <span class="floating-label">Name </span>
+                  <span class="limited-number">
+                    <span>0</span>
+                    / 50</span
+                  >
                 </div>
 
-                <div class="mb-4 phone-input">
+                <div class="mb-4 phone-input displaying">
                   <input
-                    type="password"
-                    id="exampleInputPassword1"
+                    type="tel"
+                    name="phone"
+                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     class="inputText"
                     required
                   />
                   <span class="floating-label">Phone </span>
+                </div>
+                <div class="testo mb-4 test">
+                  <input
+                    type="text"
+                    id="exampleInputEmail1"
+                    class="inputText"
+                    required
+                  />
+                  <span class="floating-label">Email</span>
                 </div>
                 <span class="use-Email"><a href="#">Use email instead</a></span>
                 <h6 class="date">Date of birth</h6>
@@ -86,7 +100,7 @@
                   <div class="mid-6">
                     <div class="upper-label">Month</div>
                     <select class="form-control form-control-lg small">
-                      <option value selected disabled hidden></option>
+                      <option value selected disabled></option>
                       <option value="">January</option>
                       <option value="">February</option>
                       <option value="">March</option>
@@ -118,7 +132,7 @@
                     <div class="upper-label">Day</div>
 
                     <select class="form-control form-control-lg small">
-                      <option value="" selected disabled hidden></option>
+                      <option value="" selected disabled></option>
                       <option value="">1</option>
                       <option value="">2</option>
                       <option value="">3</option>
@@ -166,9 +180,8 @@
                   </div>
                   <div class="mid-5">
                     <div class="upper-label">Year</div>
-
                     <select class="form-control form-control-lg small">
-                      <option value="" selected disabled hidden></option>
+                      <option value="" selected disabled></option>
                       <option value="">2021</option>
                       <option value="">2020</option>
                       <option value="">2019</option>
