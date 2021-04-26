@@ -3,12 +3,14 @@ $(window).on('load',function(){
     $('#email-input').focus();
 });
 
+var value = '';
+
 // Butona basanda :
 $('#submit-button').on('click',function(){
     // Butonun görünüşünü basılmış şəkilə gətirir
     $('#submit-button').addClass('clicked-button');
     // İnputdakı dəyəri alırıq
-    var value = $('#email-input').val();
+    value = $('#email-input').val();
     if( value == '' ){
         // İnput yalnış seçilmiş görüntüsünü alır
         $('#email-input').addClass('wrong-input'); 
