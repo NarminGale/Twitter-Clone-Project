@@ -117,6 +117,10 @@ input:focus ~ .floating-label {
   padding-right: 1rem;
   font-size: 1.05rem;
   color: black;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
+  padding-left: 8px;
+  color: rgb(15, 20, 25);
 }
 select {
   /* for Firefox */
@@ -150,4 +154,21 @@ svg {
 }
 .upper-label-color {
   color: #1da1f2;
+}
+.testo {
+  margin-bottom: 1.8rem !important;
+}
+.test {
+  display: none;
+}
+.displaying {
+  display: block;
+}
+.limited-number {
+  position: absolute;
+  right: 0.7rem;
+  top: 0.38rem;
+  font-size: 0.8rem;
+  color: rgb(91, 112, 131);
+  display: none;
 }
