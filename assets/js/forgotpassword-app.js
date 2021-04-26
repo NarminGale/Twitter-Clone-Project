@@ -23,5 +23,3 @@ $('#search-button').on('click',function(){
         $('#warning-div').html('');
     }
 });
-
-$
