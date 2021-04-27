@@ -172,3 +172,7 @@ svg {
   color: rgb(91, 112, 131);
   display: none;
 }
+.invalid-feedback {
+  padding-left: 0.7rem;
+  margin-top: 0.02rem;
+}
