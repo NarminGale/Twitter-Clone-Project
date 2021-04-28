@@ -1,9 +1,11 @@
 $('select').focus(function (e) {
   $(e.target).prev('.upper-label').css('color', 'rgba(29, 161, 242, 1)')
+  $(e.target).next().css('fill', '#1da1f2')
 })
 
 $('select').blur(function (e) {
   $(e.target).prev('.upper-label').css('color', 'rgb(91, 112, 131)')
+  $(e.target).next().css('fill', 'gray')
 })
 
 $('.use-Email').click(function () {
@@ -54,9 +56,22 @@ $('.name-input').keydown(function (event) {
 })
 
 // name validation
+
+$('.name-input').focus(function () {
+  $('#name-label').css('color', '#1da1f2')
+  $('.name-input').css('border', '2px solid #1da1f2')
+})
+
+$('.name-input').blur(function () {
+  // $('.limited-number').css('display', 'none')
+  $('#name-label').css('color', 'rgb(91, 112, 131)')
+  $('.name-input').css('border', '1px solid rgba(91, 112, 131, 0.425)')
+})
+
 $('.name-input').on('input', function () {
-  let userValue = $(this).val()
-  if (userValue === '') {
+  var nameValue = $(this).val()
+  console.log(nameValue)
+  if (nameValue === '') {
     $('#name-label').css('color', 'rgb(224, 36, 94)')
     $('.name-input').css('border', '2px solid rgb(224, 36, 94)')
     $('#validationServer04Feedback').css('display', 'block')
@@ -66,7 +81,7 @@ $('.name-input').on('input', function () {
     $('#validationServer04Feedback').css('display', 'none')
   }
   $('.name-input').focus(function () {
-    if (userValue === '') {
+    if (nameValue === '') {
       $('#name-label').css('color', 'rgb(224, 36, 94)')
       $('.name-input').css('border', '2px solid rgb(224, 36, 94)')
     } else {
@@ -74,35 +89,34 @@ $('.name-input').on('input', function () {
       $('.name-input').css('border', '2px solid #1da1f2')
     }
   })
-})
-
-$('.name-input').blur(function () {
-  $('.limited-number').css('display', 'none')
-  $('#name-label').css('color', 'rgb(91, 112, 131)')
-  $('.name-input').css('border', '1px solid rgba(91, 112, 131, 0.425)')
-
-  if ($('.name-input').val() === '') {
-    $('.name-input').css('border', '1px solid rgb(224, 36, 94)')
-  }
+  $('.name-input').blur(function () {
+    if (nameValue === '') {
+      $('.name-input').css('border', '1px solid rgb(224, 36, 94)')
+    } else {
+      $('.name-input').css('border', '1px solid rgba(91, 112, 131, 0.425)')
+    }
+  })
 })
 
 // phone validation
-$('input[type="tel"]').on('input', function () {
-  var userValue = $(this).val()
-  var phoneno = /^\d{10}$/
-  if (!userValue.match(phoneno)) {
+
+$('input[type="tel"]').focus(function () {
+  let phoneno = /^\d{10}$/
+  if (!$(this).val().match(phoneno)) {
     $('input[type="tel"]').css('border', '2px solid rgb(224, 36, 94)')
-    $('.invalid-feedback-phone').css('display', 'block')
     $('#phone-label').css('color', 'rgb(224, 36, 94)')
   } else {
     $('#phone-label').css('color', 'rgb(91, 112, 131)')
     $('input[type="tel"]').css('border', '1px solid rgba(91, 112, 131, 0.425)')
     $('.invalid-feedback-phone').css('display', 'none')
   }
+  if ($('input[type="tel"]').val() === '') {
+    $('input[type="tel"]').css('border', '2px solid #1da1f2')
+    $('#phone-label').css('color', '#1da1f2')
+  }
 })
-
 $('input[type="tel"]').blur(function () {
-  let phoneno = /^\d{9}$/
+  let phoneno = /^\d{10}$/
   if (!$(this).val().match(phoneno)) {
     $('input[type="tel"]').css('border', '2px solid rgb(224, 36, 94)')
     $('.invalid-feedback-phone').css('display', 'block')
@@ -114,6 +128,20 @@ $('input[type="tel"]').blur(function () {
   }
 
   if ($(this).val() === '') {
+    $('#phone-label').css('color', 'rgb(91, 112, 131)')
+    $('input[type="tel"]').css('border', '1px solid rgba(91, 112, 131, 0.425)')
+    $('.invalid-feedback-phone').css('display', 'none')
+  }
+})
+$('input[type="tel"]').on('input', function () {
+  var phoneValue = $(this).val()
+  console.log(phoneValue)
+  var phoneno = /^\d{10}$/
+  if (!phoneValue.match(phoneno)) {
+    $('input[type="tel"]').css('border', '2px solid rgb(224, 36, 94)')
+    $('.invalid-feedback-phone').css('display', 'block')
+    $('#phone-label').css('color', 'rgb(224, 36, 94)')
+  } else {
     $('#phone-label').css('color', 'rgb(91, 112, 131)')
     $('input[type="tel"]').css('border', '1px solid rgba(91, 112, 131, 0.425)')
     $('.invalid-feedback-phone').css('display', 'none')

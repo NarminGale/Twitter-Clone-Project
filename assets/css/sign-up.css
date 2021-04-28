@@ -8,7 +8,7 @@
 .modal-body {
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-bottom: 4.5rem;
+  padding-bottom: 3rem;
 }
 .modal-header {
   padding-top: 10px;
@@ -66,7 +66,7 @@ input:focus ~ .floating-label {
   outline: none;
 }
 .inputText:focus {
-  border: 1px solid #1da1f2;
+  border: 2px solid #1da1f2;
 }
 
 .floating-label {
@@ -75,7 +75,6 @@ input:focus ~ .floating-label {
   pointer-events: none;
   left: 10px;
   top: 16px;
-
   color: rgb(91, 112, 131);
   transition: 0.2s ease all;
 }
@@ -144,6 +143,7 @@ svg {
   right: 15px;
   fill: gray;
 }
+
 .upper-label {
   position: absolute;
   font-size: 13px;
@@ -175,4 +175,29 @@ svg {
 .invalid-feedback {
   padding-left: 0.7rem;
   margin-top: 0.02rem;
+}
+
+@media screen and (max-width: 700px) {
+  /* .modal {
+    position: relative;
+  } */
+  .modal-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: block;
+    min-height: 100%;
+    max-width: 100% !important;
+  }
+  .modal-content {
+    border-radius: 0;
+    height: 100%;
+    padding-bottom: 48px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .text {
+    margin-bottom: 0;
+  }
 }
