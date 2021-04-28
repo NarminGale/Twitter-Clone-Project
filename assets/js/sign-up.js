@@ -7,6 +7,12 @@ $('select').blur(function (e) {
 })
 
 $('.use-Email').click(function () {
+  console.log($(this).text())
+  if ($('.use-Email > a').text() === 'Use email instead') {
+    $('.use-Email > a').text('Use phone instead')
+  } else {
+    $('.use-Email > a').text('Use email instead')
+  }
   if ($('.phone-input').hasClass('displaying')) {
     $('.phone-input').addClass('test')
     $('.phone-input').removeClass('displaying')
@@ -22,39 +28,12 @@ $('.use-Email').click(function () {
     $('.testo').removeClass('displaying')
   }
 })
-
-$(document).ready(function () {
-  $('.name-input').focus(function () {
-    $('#name-label').css('color', '#1da1f2')
-    $('.name-input').css('border', '2px solid #1da1f2')
-  })
-})
-
-$('.name-input').focus(function () {
-  if ($('.name-input').val() === '') {
-    console.log($('.name-input').val())
-    $('#name-label').css('color', 'black')
-  }
-})
-$('.name-input').blur(function () {
-  $('.limited-number').css('display', 'none')
-  $('#name-label').css('color', 'rgb(91, 112, 131)')
-  $('.name-input').css('border', '1px solid rgba(91, 112, 131, 0.425)')
-
-  if ($('.name-input').val() === '') {
-    $('.name-input').css('border', '1px solid rgb(224, 36, 94)')
-  }
-})
-
 let count = 0
 
 $('.name-input').keypress(function (event) {
   count++
   $('.limited-number span').text(count)
   let a = $('.limited-number span').text()
-  // if (parseInt(a) < 50) {
-  //   count++
-  // }
   if (parseInt(a) > 50) {
     count = 50
     let a = $('.limited-number span').text('50')
@@ -77,19 +56,37 @@ $('.name-input').keydown(function (event) {
 // name validation
 $('.name-input').on('input', function () {
   let userValue = $(this).val()
-  console.log(userValue)
   if (userValue === '') {
     $('#name-label').css('color', 'rgb(224, 36, 94)')
     $('.name-input').css('border', '2px solid rgb(224, 36, 94)')
     $('#validationServer04Feedback').css('display', 'block')
   } else {
     $('.name-input').css('border', '2px solid #1da1f2')
+    $('#name-label').css('color', '#1da1f2')
     $('#validationServer04Feedback').css('display', 'none')
+  }
+  $('.name-input').focus(function () {
+    if (userValue === '') {
+      $('#name-label').css('color', 'rgb(224, 36, 94)')
+      $('.name-input').css('border', '2px solid rgb(224, 36, 94)')
+    } else {
+      $('#name-label').css('color', '#1da1f2')
+      $('.name-input').css('border', '2px solid #1da1f2')
+    }
+  })
+})
+
+$('.name-input').blur(function () {
+  $('.limited-number').css('display', 'none')
+  $('#name-label').css('color', 'rgb(91, 112, 131)')
+  $('.name-input').css('border', '1px solid rgba(91, 112, 131, 0.425)')
+
+  if ($('.name-input').val() === '') {
+    $('.name-input').css('border', '1px solid rgb(224, 36, 94)')
   }
 })
 
 // phone validation
-
 $('input[type="tel"]').on('input', function () {
   var userValue = $(this).val()
   var phoneno = /^\d{10}$/
@@ -106,7 +103,6 @@ $('input[type="tel"]').on('input', function () {
 
 $('input[type="tel"]').blur(function () {
   let phoneno = /^\d{9}$/
-  console.log($(this).val())
   if (!$(this).val().match(phoneno)) {
     $('input[type="tel"]').css('border', '2px solid rgb(224, 36, 94)')
     $('.invalid-feedback-phone').css('display', 'block')
@@ -116,6 +112,7 @@ $('input[type="tel"]').blur(function () {
     $('input[type="tel"]').css('border', '1px solid rgba(91, 112, 131, 0.425)')
     $('.invalid-feedback-phone').css('display', 'none')
   }
+
   if ($(this).val() === '') {
     $('#phone-label').css('color', 'rgb(91, 112, 131)')
     $('input[type="tel"]').css('border', '1px solid rgba(91, 112, 131, 0.425)')
