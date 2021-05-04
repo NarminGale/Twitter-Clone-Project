@@ -4,27 +4,22 @@
     color: #55acee;
     padding-top: 18px;
 }
-
 #regain-link:hover{
     color: #55acee;
 }
-
 #profile-part{
     display: flex;
     flex-direction: row;
 }
-
 #fullname-part{
     color: #000;
     font-size: 14px;
     font-weight: bold;
 }
-
 #username-part{
     color: #657786;
     font-size: 14px;
 }
-
 #user-details-part{
     margin: 5px 0 0 10px;
 }
