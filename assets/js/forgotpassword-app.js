@@ -21,6 +21,5 @@ $('#search-button').on('click',function(){
         $('#repair-input').css('border','1px solid #1da1f2');
         // Xəbərdarlığı yığışdırır
         $('#warning-div').html('');
-        window.location.href = "verify-user.html";
     }
 });
